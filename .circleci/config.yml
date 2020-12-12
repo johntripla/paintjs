@@ -1,0 +1,17 @@
+version: 2.1
+jobs:
+  Test:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run:
+          name : Kick off new pipeline
+          command: |
+            curl --location --request POST 'https://circleci.com/api/v2/project/github/johntripla/postman-circleCI/pipeline' \
+            --header 'Content-Type: application/json' \
+            -u "${8026ea55826de6cb8a9152b1eb0cef308b2b921a}:"
+workflows:
+  build_test:
+    jobs:
+      - Test
