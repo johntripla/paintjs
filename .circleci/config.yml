@@ -8,7 +8,7 @@ jobs:
       - run:
           name : Kick off new pipeline
           command: |
-            curl --location --request POST 'https://circleci.com/api/v2.1/project/gh/johntripla/postman-circleCI/pipeline' \
+            curl --location --request POST 'https://circleci.com/api/v1.1/project/gh/johntripla/postman-circleCI/pipeline' \
             --header 'Content-Type: application/json' \
             -u "${API_TOKEN}:"
 workflows:
