@@ -10,7 +10,7 @@ jobs:
           command: |
             curl --location --request POST 'https://circleci.com/api/v2/project/github/johntripla/postman-circleCI/pipeline' \
             --header 'Content-Type: application/json' \
-            -u "${8026ea55826de6cb8a9152b1eb0cef308b2b921a}:"
+            -u "${API_TOKEN}:"
 workflows:
   build_test:
     jobs:
